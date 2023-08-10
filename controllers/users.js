@@ -46,6 +46,8 @@ const updateUserById = (req, res, next) => {
         next(new BadRequestError(`${Object.values(err.errors)
           .map((error) => error.message)
           .join(', ')}`));
+      } else if (err.code === 11000) {
+        next(new ConflictError('Такой пользователь уже зарегистрирован'));
       } else {
         next(err);
       }
