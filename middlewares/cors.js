@@ -1,4 +1,6 @@
 const allowedCors = [
+  'http://mvxxs-movies.nomoredomainsrocks.ru',
+  'https://mvxxs-movies.nomoredomainsrocks.ru',
   'http://localhost:3000',
   'https://localhost:3000',
 ];
